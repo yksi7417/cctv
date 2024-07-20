@@ -9,6 +9,9 @@ import lockRouter from './routes/lock';
 import unlockRouter from './routes/unlock';
 import rebootRouter from './routes/reboot';
 import shutdownRouter from './routes/shutdown';
+import cctv4Router from './routes/cctv4';
+import fhtvRouter from './routes/fhtv';
+import zoomRouter from './routes/zoom';
 
 const app = express();
 
@@ -23,6 +26,9 @@ app.use('/users', usersRouter);
 app.use('/lock', lockRouter);
 app.use('/unlock', unlockRouter);
 app.use('/reboot', rebootRouter);
-app.use('/reboot', shutdownRouter);
+app.use('/shutdown', shutdownRouter);
+app.use('/zoom', zoomRouter);
+app.use('/cctv4', cctv4Router);
+app.use('/fhtv', fhtvRouter);
 
 export default app;
