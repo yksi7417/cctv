@@ -12,6 +12,9 @@ import shutdownRouter from './routes/shutdown';
 import cctv4Router from './routes/cctv4';
 import fhtvRouter from './routes/fhtv';
 import zoomRouter from './routes/zoom';
+import tvbRouter from './routes/tvb';
+import daaiRouter from './routes/daai';
+import taiwanRouter from './routes/taiwan';
 
 const app = express();
 
@@ -30,5 +33,8 @@ app.use('/shutdown', shutdownRouter);
 app.use('/zoom', zoomRouter);
 app.use('/cctv4', cctv4Router);
 app.use('/fhtv', fhtvRouter);
+app.use('/tvb', tvbRouter);
+app.use('/daai', daaiRouter);
+app.use('/taiwan', taiwanRouter);
 
 export default app;

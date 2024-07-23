@@ -5,7 +5,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
-  exec('Get-Process chrome | ForEach-Object { $_.CloseMainWindow() | Out-Null}; Start "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" \'--start-fullscreen "https://www.youtube.com/watch?v=HFib76ySpbU"\' ; Start "C:\\Program Files\\AutoHotkey\\AutoHotkey.exe" C:\\dvlp\\cctv\\cmd\\fullscreen.ahk', {'shell':'powershell.exe'}, (error, stdout, stderr)=> {
+  exec('Start "C:\\dvlp\\cctv\\cmd\\ps1\\fhtv.ps1" ', {'shell':'powershell.exe'}, (error, stdout, stderr)=> {
     res.send(`${stdout}<p>${stderr}<p>${error}`);
   })
 });

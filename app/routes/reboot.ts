@@ -4,8 +4,8 @@ import { exec } from 'child_process';
 const router = express.Router();
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
-  exec('shutdown /r /t 0', {'shell':'powershell.exe'}, (error, stdout, stderr)=> {
-    res.send(`${stdout}`);
+  exec('Start "C:\\dvlp\\cctv\\cmd\\ps1\\reboot.ps1" ', {'shell':'powershell.exe'}, (error, stdout, stderr)=> {
+    res.send(`${stdout}<p>${stderr}<p>${error}`);
   })
 });
 
