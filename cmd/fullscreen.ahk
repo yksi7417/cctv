@@ -1,2 +1,2 @@
-Sleep, 5000
+Sleep, 15000
 Send, F
