@@ -16,6 +16,14 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
       </head>
       
       <body>
+        <div id="spinner" class="spinner"></div>
+        <script>
+          window.onload = function() {
+            setTimeout(() => {
+              window.location.href = 'index.html';
+            }, 5000); 
+          };
+        </script>
         <h1 style="color: rgb(255, 0, 0)">CCTV-4中文国际亚洲</h1>
         <img src="/cctv.png" />
       </body>

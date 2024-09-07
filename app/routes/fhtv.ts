@@ -17,6 +17,14 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
 </head>
 
 <body>
+  <div id="spinner" class="spinner"></div>
+  <script>
+    window.onload = function() {
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 5000); 
+    };
+  </script>
   <h1 style="color: rgb(201, 169, 25)">凤凰卫视</h1>
   <img src="/fhtv.png" />
 
