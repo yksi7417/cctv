@@ -11,6 +11,7 @@ import rebootRouter from './routes/reboot';
 import shutdownRouter from './routes/shutdown';
 import cctv4Router from './routes/cctv4';
 import breathRouter from './routes/breath';
+import pingshuaiRouter from './routes/pingshuai';
 import fhtvRouter from './routes/fhtv';
 import zoomRouter from './routes/zoom';
 import tvbRouter from './routes/tvb';
@@ -34,6 +35,7 @@ app.use('/shutdown', shutdownRouter);
 app.use('/zoom', zoomRouter);
 app.use('/cctv4', cctv4Router);
 app.use('/breath', breathRouter);
+app.use('/pingshuai', pingshuaiRouter)
 app.use('/fhtv', fhtvRouter);
 app.use('/tvb', tvbRouter);
 app.use('/daai', daaiRouter);
